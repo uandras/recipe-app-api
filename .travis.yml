@@ -1,0 +1,14 @@
+#this script will run everytime we push to git
+# if fails at the end (the test and the linting) it will send an e-mail with the break of code
+language: python
+python:
+  - "3.7"
+
+services:
+  - docker
+
+before_scripting: pip install docker-compose
+
+#flake8: linting tool
+script:
+  - docker-compose run app sh -c "python manage.py test && flake8"
