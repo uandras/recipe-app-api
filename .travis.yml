@@ -2,7 +2,7 @@
 # if fails at the end (the test and the linting) it will send an e-mail with the break of code
 language: python
 python:
-  - "3.7"
+  - "3.6"
 
 services:
   - docker
